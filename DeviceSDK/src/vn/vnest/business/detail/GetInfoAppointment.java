@@ -1,0 +1,39 @@
+package vn.vnest.business.detail;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
+import io.netty.handler.codec.http.HttpHeaders;
+import vn.vnest.business.BaseBusiness;
+import vn.vnest.dbo.DeviceDBO;
+import vn.vnest.entities.InfoAppointment;
+import vn.vnest.response.BaseResponse;
+import vn.vnest.response.GetInfoAppointmentResponse;
+
+public class GetInfoAppointment extends BaseBusiness {
+	private static final Logger logger = LogManager.getLogger(GetInfoAppointment.class);
+
+	@Override
+	protected boolean extraValidData(String input) {
+		return true;
+	}
+
+	@Override
+	public BaseResponse process(HttpHeaders headers, HashMap<String, String> params, String body) {
+		String deviceId = params.get("deviceId");
+		String startDate = params.get("startDate");
+		String endDate = params.get("endDate");
+		try {
+			ArrayList<InfoAppointment> infoAppointments = DeviceDBO.getInfoAppointment(deviceId,startDate,endDate);
+			return new GetInfoAppointmentResponse(infoAppointments);
+		} catch (Exception e) {
+			logger.info("", e);
+		}
+		return null;
+	}
+
+}
