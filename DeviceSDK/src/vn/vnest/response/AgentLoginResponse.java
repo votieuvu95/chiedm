@@ -1,14 +1,23 @@
 package vn.vnest.response;
 
 public class AgentLoginResponse extends BaseResponse {
-	
-	public AgentLoginResponse(int code) {
-		if (code > 0) {
+	private String token;
+	public AgentLoginResponse(String code) {
+		if (!code.isEmpty()) {
 			setCode(SUCCESS);
 			setDescription("Success");
+			this.token = code;
 		} else {
 			setCode(FAILURE);
 			setDescription("Fail");
 		}
 	}
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
+	}
+	
+	
 }

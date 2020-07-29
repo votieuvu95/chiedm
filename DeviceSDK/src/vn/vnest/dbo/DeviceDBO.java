@@ -1,7 +1,5 @@
 package vn.vnest.dbo;
 
-import java.math.BigDecimal;
-import java.net.InetSocketAddress;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.sql.CallableStatement;
@@ -15,12 +13,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.whalin.MemCached.MemCachedClient;
-import com.whalin.MemCached.SockIOPool;
 
 import vn.vnest.entities.InfoAgent;
 import vn.vnest.entities.InfoAppointment;
@@ -33,11 +30,12 @@ import vn.vnest.request.CreateAgentRequest;
 import vn.vnest.request.DeviceLoginRequest;
 import vn.vnest.request.DeviceServiceRequest;
 import vn.vnest.request.HistoryAppointmentRequest;
+import vn.vnest.utils.Utils;
+import redis.clients.jedis.Jedis;
 
 public class DeviceDBO {
 	private static final Logger log = LogManager.getLogger(DeviceDBO.class);
-	
-	MemCachedClient mcc;
+
 	public static Timestamp parseDatePost(String time) {
 		String pattern = "yyyy-MM-dd HH:mm:ss";
 		SimpleDateFormat format = new SimpleDateFormat(pattern);
@@ -54,9 +52,9 @@ public class DeviceDBO {
 	}
 
 	public static String parseDateGet(String time) {
-		String pattern = "yyyyMMdd";
+		String pattern = "yyyyMMddHHmmss";
 		DateFormat format = new SimpleDateFormat(pattern);
-		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String datetime = "";
 		try {
 			if (time != null) {
@@ -138,8 +136,8 @@ public class DeviceDBO {
 				cs.setString(7, deviceLogin.getId());
 				cs.setString(8, deviceLogin.getIncremental());
 				cs.setString(9, deviceLogin.getModel());
-				cs.setInt(10, deviceLogin.getSdk());
-				cs.setInt(11, deviceLogin.getVersionCode());
+				cs.setString(10, deviceLogin.getSdk());
+				cs.setString(11, deviceLogin.getVersionCode());
 				cs.setString(12, deviceLogin.getType());
 				cs.setString(13, deviceLogin.getUser());
 
@@ -179,7 +177,7 @@ public class DeviceDBO {
 				cs.setTimestamp(3, parseDatePost(historyAppointment.getStartDate()));
 				cs.setTimestamp(4, parseDatePost(historyAppointment.getEndDate()));
 				cs.setString(5, historyAppointment.getQuestion());
-				cs.setInt(6, historyAppointment.getStatus());
+				cs.setString(6, historyAppointment.getStatus());
 
 				rs = cs.executeQuery();
 				if (rs != null && rs.next()) {
@@ -206,6 +204,7 @@ public class DeviceDBO {
 		Connection connection = null;
 		CallableStatement st = null;
 		ResultSet rs = null;
+
 		try {
 			connection = DeviceDataSource.getInstance().getConnection();
 			if (connection != null) {
@@ -260,11 +259,9 @@ public class DeviceDBO {
 				cs.setString(2, deviceService.getAction());
 				cs.setTimestamp(3, parseDatePost(deviceService.getStartDate()));
 				cs.setTimestamp(4, parseDatePost(deviceService.getEndDate()));
-				cs.setBigDecimal(5,
-						deviceService.getAmount().compareTo(new BigDecimal(0)) > 0 ? deviceService.getAmount()
-								: new BigDecimal(0));
-				cs.setInt(6, deviceService.getCount() > 0 ? deviceService.getCount() : 1);
-				cs.setInt(7, deviceService.getQuantity() > 0 ? deviceService.getQuantity() : 1);
+				cs.setDouble(5, !deviceService.getAmount().isEmpty() ? Double.parseDouble(deviceService.getAmount()) : 0);
+				cs.setInt(6, !deviceService.getCount().isEmpty() ? Integer.parseInt(deviceService.getCount()) : 1);
+				cs.setInt(7, !deviceService.getQuantity().isEmpty()  ? Integer.parseInt(deviceService.getQuantity()) : 1);
 				cs.setString(8, deviceService.getQuestion());
 				rs = cs.executeQuery();
 				if (rs != null && rs.next()) {
@@ -298,8 +295,8 @@ public class DeviceDBO {
 				st = connection.prepareCall(sql);
 				st.clearParameters();
 				st.setString(1, id);
-				st.setString(2, stDate);
-				st.setString(3, eDate);
+				st.setString(2, parseDateGet(stDate));
+				st.setString(3, parseDateGet(eDate));
 				st.setString(4, URLDecoder.decode(at, StandardCharsets.UTF_8.name()));
 				st.setString(5, c);
 				st.setString(6, q);
@@ -311,9 +308,9 @@ public class DeviceDBO {
 						String startDate = rs.getString("startDate");
 						String endDate = rs.getString("endDate");
 						String action = rs.getString("action");
-						int count = rs.getInt("count");
-						int quantity = rs.getInt("quantity");
-						BigDecimal amount = rs.getBigDecimal("amount");
+						String count = rs.getString("count");
+						String quantity = rs.getString("quantity");
+						String amount = rs.getString("amount");
 						DeviceServiceRequest info = new DeviceServiceRequest(deviceId, action, startDate, endDate,
 								amount, count, quantity);
 						infoDeviceService.add(info);
@@ -339,15 +336,14 @@ public class DeviceDBO {
 		Connection con = null;
 		CallableStatement cs = null;
 		ResultSet rs = null;
-		String s = cached("", codeRequest.getPhone());
 		try {
 			con = DeviceDataSource.getInstance().getConnection();
 			if (con != null) {
-				String sql = "{Call createActivationCode(?,?)}";
+				String sql = "{Call createActivationCode(?,?,?)}";
 				cs = con.prepareCall(sql);
 				cs.clearParameters();
 				cs.setString(1, codeRequest.getPhone());
-				cs.setString(2, s);
+//				cs.setString(2, jd.get(codeRequest.getPhone()));
 				rs = cs.executeQuery();
 				if (rs != null && rs.next()) {
 					res = rs.getString("res");
@@ -447,15 +443,15 @@ public class DeviceDBO {
 		}
 		return agents;
 	}
-	
+
 	public static int createAgent(CreateAgentRequest request) {
 		int res = 0;
-		Connection con =null;
+		Connection con = null;
 		CallableStatement st = null;
 		ResultSet rs = null;
 		try {
 			con = DeviceDataSource.getInstance().getConnection();
-			if(con !=null) {
+			if (con != null) {
 				String sql = "Call createAgent(?,?,?)";
 				st = con.prepareCall(sql);
 				st.clearParameters();
@@ -463,27 +459,27 @@ public class DeviceDBO {
 				st.setString(2, request.getName());
 				st.setString(3, request.getAddress());
 				rs = st.executeQuery();
-				if(rs!=null && rs.next()) {
+				if (rs != null && rs.next()) {
 					res = rs.getInt("res");
 				}
 			} else {
 				log.info("conection is null");
 			}
 		} catch (Exception e) {
-			log.info("",e);
+			log.info("", e);
 		}
 		return res;
-		
+
 	}
-	
+
 	public static int createAgentAccount(AgentAccountRequest request) {
 		int res = 0;
-		Connection con =null;
+		Connection con = null;
 		CallableStatement st = null;
 		ResultSet rs = null;
 		try {
 			con = DeviceDataSource.getInstance().getConnection();
-			if(con !=null) {
+			if (con != null) {
 				String sql = "Call createAgentAccount(?,?,?)";
 				st = con.prepareCall(sql);
 				st.clearParameters();
@@ -491,27 +487,27 @@ public class DeviceDBO {
 				st.setString(2, request.getUserName());
 				st.setString(3, request.getPassWord());
 				rs = st.executeQuery();
-				if(rs!=null && rs.next()) {
+				if (rs != null && rs.next()) {
 					res = rs.getInt("res");
 				}
 			} else {
 				log.info("conection is null");
 			}
 		} catch (Exception e) {
-			log.info("",e);
+			log.info("", e);
 		}
 		return res;
-		
+
 	}
-	
-	public static int agentLogin(AgentLoginRequest request) {
-		int res = 0;
-		Connection con =null;
+
+	public static String agentLogin(AgentLoginRequest request) {
+		String token = "";
+		Connection con = null;
 		CallableStatement st = null;
 		ResultSet rs = null;
 		try {
 			con = DeviceDataSource.getInstance().getConnection();
-			if(con !=null) {
+			if (con != null) {
 				String sql = "Call createAgent(?,?,?)";
 				st = con.prepareCall(sql);
 				st.clearParameters();
@@ -519,39 +515,29 @@ public class DeviceDBO {
 				st.setString(2, request.getUserName());
 				st.setString(3, request.getPassWord());
 				rs = st.executeQuery();
-				if(rs!=null && rs.next()) {
-					res = rs.getInt("res");
+				if (rs != null && rs.next()) {
+					Jedis jd = new Jedis("127.0.0.1");
+					token = Utils.UURanDom();
+//					set String redis
+					 jd.set(request.getUserName(), token); 
+
+					// set HashMap redis
+					HashMap<String, String> maps = new HashMap<>();
+					maps.put(request.getUserName(), token);
+					maps.put(request.getAgentCode(), request.getPassWord());
+					jd.hmset("account", maps);
+					Map<String, String> poMap = jd.hgetAll("account");
+
 				}
 			} else {
 				log.info("conection is null");
 			}
 		} catch (Exception e) {
-			log.info("",e);
+			log.info("", e);
 		}
 
-		cached(request.getUserName(),"");
-		return res;
-		
-	}
-	
-	public static String  cached(String sql,String s) {
-		String[] servers = {"localhost:11111"};
-		SockIOPool pool = SockIOPool.getInstance("Login");
-		pool.setServers( servers );
-		pool.setFailover( true );
-		pool.setInitConn( 10 );
-		pool.setMinConn( 5 );
-		pool.setMaxConn( 250 );
-		pool.setMaintSleep( 30 );
-		pool.setNagle( false );
-		pool.setSocketTO( 3000 );
-		pool.setAliveCheck( true );
-		pool.initialize();
-		MemCachedClient mcc = new MemCachedClient("Login");
-		mcc.set(sql, "2231231312");
-		String s1 = (String) mcc.get(s);
-		return s1;
-		
-	}
-}
+		return token;
 
+	}
+
+}

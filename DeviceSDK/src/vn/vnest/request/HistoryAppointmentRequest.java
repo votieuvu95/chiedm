@@ -4,7 +4,7 @@ package vn.vnest.request;
 public class HistoryAppointmentRequest extends BaseRequest {
 	private String deviceId, content;
 	private String startDate, endDate,question;
-	private int status;
+	private String status;
 
 	public HistoryAppointmentRequest( String deviceId, String content, String startDate, String endDate) {
 		super();
@@ -54,11 +54,11 @@ public class HistoryAppointmentRequest extends BaseRequest {
 		this.question = question;
 	}
 
-	public int getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(int status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 	

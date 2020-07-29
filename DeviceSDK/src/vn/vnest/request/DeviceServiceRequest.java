@@ -4,13 +4,13 @@ import java.math.BigDecimal;
 
 public class DeviceServiceRequest {
 	private String deviceId,action,startDate,endDate,question;
-	private BigDecimal amount;
-	private int count,quantity;
+	private String amount;
+	private String count,quantity;
 	
 	
 	
 	public DeviceServiceRequest(String deviceId, String action, String startDate, String endDate,
-			BigDecimal amount, int count, int quantity) {
+			String amount, String count, String quantity) {
 		super();
 		this.deviceId = deviceId;
 		this.action = action;
@@ -45,22 +45,22 @@ public class DeviceServiceRequest {
 	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
-	public BigDecimal getAmount() {
+	public String getAmount() {
 		return amount;
 	}
-	public void setAmount(BigDecimal amount) {
+	public void setAmount(String amount) {
 		this.amount = amount;
 	}
-	public int getCount() {
+	public String getCount() {
 		return count;
 	}
-	public void setCount(int count) {
+	public void setCount(String count) {
 		this.count = count;
 	}
-	public int getQuantity() {
+	public String getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(int quantity) {
+	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
 

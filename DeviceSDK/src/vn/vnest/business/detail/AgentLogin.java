@@ -28,7 +28,7 @@ public class AgentLogin extends BaseBusiness {
 	public BaseResponse process(HttpHeaders headers, HashMap<String, String> params, String body) {
 		AgentLoginRequest request = gson.fromJson(body, AgentLoginRequest.class);
 		try {
-			int code = DeviceDBO.agentLogin(request);
+			String code = DeviceDBO.agentLogin(request);
 			return new AgentLoginResponse(code);
 		} catch (Exception e) {
 			log.info("", e);

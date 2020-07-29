@@ -1,11 +1,11 @@
 package vn.vnest.request;
 
 public class DeviceLoginRequest extends BaseRequest {
-	private int dId,versionCode,sdk;
+	private String dId,versionCode,sdk;
 	private String base, board, brand, deviceId, fingerPrint, host, id, incremental, model, type, user;
 
-	public DeviceLoginRequest(int dId, String base, String board, String brand, String deviceId, String fingerPrint,
-			String host, String id, String incremental, String model, String type, String user, int sdk,int versionCode) {
+	public DeviceLoginRequest(String dId, String base, String board, String brand, String deviceId, String fingerPrint,
+			String host, String id, String incremental, String model, String type, String user, String sdk,String versionCode) {
 		super();
 		this.dId = dId;
 		this.base = base;
@@ -23,11 +23,11 @@ public class DeviceLoginRequest extends BaseRequest {
 		this.versionCode = versionCode;
 	}
 
-	public int getdId() {
+	public String getdId() {
 		return dId;
 	}
 
-	public void setdId(int dId) {
+	public void setdId(String dId) {
 		this.dId = dId;
 	}
 
@@ -119,19 +119,19 @@ public class DeviceLoginRequest extends BaseRequest {
 		this.user = user;
 	}
 
-	public int getSdk() {
+	public String getSdk() {
 		return sdk;
 	}
 
-	public void setSdk(int sdk) {
+	public void setSdk(String sdk) {
 		this.sdk = sdk;
 	}
 
-	public int getVersionCode() {
+	public String getVersionCode() {
 		return versionCode;
 	}
 
-	public void setVersionCode(int versionCode) {
+	public void setVersionCode(String versionCode) {
 		this.versionCode = versionCode;
 	}
 
