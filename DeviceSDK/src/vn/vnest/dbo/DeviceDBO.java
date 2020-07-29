@@ -18,7 +18,8 @@ import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
+import redis.clients.jedis.Jedis;
+import vn.vnest.cache.JedisFactory;
 import vn.vnest.entities.InfoAgent;
 import vn.vnest.entities.InfoAppointment;
 import vn.vnest.entities.InfoDevice;
@@ -31,7 +32,6 @@ import vn.vnest.request.DeviceLoginRequest;
 import vn.vnest.request.DeviceServiceRequest;
 import vn.vnest.request.HistoryAppointmentRequest;
 import vn.vnest.utils.Utils;
-import redis.clients.jedis.Jedis;
 
 public class DeviceDBO {
 	private static final Logger log = LogManager.getLogger(DeviceDBO.class);
@@ -337,13 +337,14 @@ public class DeviceDBO {
 		CallableStatement cs = null;
 		ResultSet rs = null;
 		try {
+			Jedis jd = JedisFactory.getInstance().getJedisPool().getResource();
 			con = DeviceDataSource.getInstance().getConnection();
 			if (con != null) {
-				String sql = "{Call createActivationCode(?,?,?)}";
+				String sql = "{Call createActivationCode(?,?)}";
 				cs = con.prepareCall(sql);
 				cs.clearParameters();
 				cs.setString(1, codeRequest.getPhone());
-//				cs.setString(2, jd.get(codeRequest.getPhone()));
+				cs.setString(2, jd.get(codeRequest.getPhone()));
 				rs = cs.executeQuery();
 				if (rs != null && rs.next()) {
 					res = rs.getString("res");
@@ -516,7 +517,7 @@ public class DeviceDBO {
 				st.setString(3, request.getPassWord());
 				rs = st.executeQuery();
 				if (rs != null && rs.next()) {
-					Jedis jd = new Jedis("127.0.0.1");
+					Jedis jd = JedisFactory.getInstance().getJedisPool().getResource();
 					token = Utils.UURanDom();
 //					set String redis
 					 jd.set(request.getUserName(), token); 

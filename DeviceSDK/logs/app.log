@@ -165,3 +165,273 @@ java.net.BindException: Address already in use
 2020-07-29 17:41:37,331 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Close channel of 
 2020-07-29 17:41:37,331 INFO v.v.s.MyChannel [nioEventLoopGroup-3-2] Close is done!
 2020-07-29 17:41:37,332 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Channel inactive!
+2020-07-29 23:10:57,110 INFO v.v.m.Constant [Thread-1] ReadingConfig complete:
+2020-07-29 23:10:57,110 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoDevice - GET_getinfodevice
+2020-07-29 23:10:57,117 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.DeviceLogin - POST_devicelogin
+2020-07-29 23:10:57,117 INFO v.v.m.Constant [Thread-1] port=1304
+ rasaUrl=http://localhost:5050/model/parse?emulation_mode=dialogflow
+ prefixTopic=/
+ s2tUrl=http://localhost:9090
+ t2sUrl=http://localhost:9091
+ mapUrl=http://localhost:9092
+ mediaUrl=http://localhost:9093
+2020-07-29 23:10:57,118 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.HistoryAppointment - POST_historyappointment
+2020-07-29 23:10:57,118 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoAppointment - GET_getinfoappointment
+2020-07-29 23:10:57,119 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.DeviceService - POST_deviceservice
+2020-07-29 23:10:57,119 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoDeviceService - GET_getinfodeviceservice
+2020-07-29 23:10:57,120 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.CreateActivationCode - POST_createactivationcode
+2020-07-29 23:10:57,120 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetActivationCode - GET_getactivationcode
+2020-07-29 23:10:57,120 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.ActiveDevice - POST_activedevice
+2020-07-29 23:10:57,120 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetAgent - GET_getagent
+2020-07-29 23:10:57,121 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.CreateAgent - POST_createagent
+2020-07-29 23:10:57,121 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.AgentLogin - POST_agentlogin
+2020-07-29 23:11:13,916 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Channel inactive!
+2020-07-29 23:11:13,921 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Close channel of 
+2020-07-29 23:11:14,037 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Request info: value={
+    "agentCode":"123",
+    "userName":"0976123321",
+    "password":"1"
+}, host=0:0:0:0:0:0:0:1, topic=/agentlogin
+2020-07-29 23:11:14,214 INFO v.v.h.TopicManager [nioEventLoopGroup-3-2] data: {
+    "agentCode":"123",
+    "userName":"0976123321",
+    "password":"1"
+}
+2020-07-29 23:11:44,208 INFO v.v.d.DeviceDBO [nioEventLoopGroup-3-2] 
+java.io.FileNotFoundException: conf/jedis.properties (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_181]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_181]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_181]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[?:1.8.0_181]
+	at vn.vnest.cache.JedisFactory.<init>(JedisFactory.java:20) ~[bin/:?]
+	at vn.vnest.cache.JedisFactory.getInstance(JedisFactory.java:31) ~[bin/:?]
+	at vn.vnest.dbo.DeviceDBO.agentLogin(DeviceDBO.java:519) [bin/:?]
+	at vn.vnest.business.detail.AgentLogin.process(AgentLogin.java:31) [bin/:?]
+	at vn.vnest.business.BaseBusiness.procces(BaseBusiness.java:35) [bin/:?]
+	at vn.vnest.httphandler.TopicManager.process(TopicManager.java:32) [bin/:?]
+	at vn.vnest.server.HttpServerHandler.decodeData(HttpServerHandler.java:86) [bin/:?]
+	at vn.vnest.server.HttpServerHandler.channelRead0(HttpServerHandler.java:136) [bin/:?]
+	at vn.vnest.server.HttpServerHandler.channelRead0(HttpServerHandler.java:1) [bin/:?]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:310) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:284) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:138) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2020-07-29 23:11:44,264 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-2] Response:{"code":"0","description":"Fail"}
+2020-07-29 23:11:44,274 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Write:{"code":"0","description":"Fail"}
+2020-07-29 23:11:44,288 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Write to client:200 OK
+2020-07-29 23:11:44,305 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Close channel of 
+2020-07-29 23:11:44,307 INFO v.v.s.MyChannel [nioEventLoopGroup-3-2] Close is done!
+2020-07-29 23:11:44,309 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Channel inactive!
+2020-07-29 23:12:50,197 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Channel inactive!
+2020-07-29 23:12:50,199 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Close channel of 
+2020-07-29 23:12:50,200 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Request info: value={
+    "agentCode":"123",
+    "userName":"0976123321",
+    "password":"1"
+}, host=0:0:0:0:0:0:0:1, topic=/agentlogin
+2020-07-29 23:12:50,201 INFO v.v.h.TopicManager [nioEventLoopGroup-3-4] data: {
+    "agentCode":"123",
+    "userName":"0976123321",
+    "password":"1"
+}
+2020-07-29 23:12:50,574 INFO v.v.d.DeviceDBO [nioEventLoopGroup-3-4] 
+java.io.FileNotFoundException: conf/jedis.properties (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_181]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_181]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_181]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[?:1.8.0_181]
+	at vn.vnest.cache.JedisFactory.<init>(JedisFactory.java:20) ~[bin/:?]
+	at vn.vnest.cache.JedisFactory.getInstance(JedisFactory.java:31) ~[bin/:?]
+	at vn.vnest.dbo.DeviceDBO.agentLogin(DeviceDBO.java:519) [bin/:?]
+	at vn.vnest.business.detail.AgentLogin.process(AgentLogin.java:31) [bin/:?]
+	at vn.vnest.business.BaseBusiness.procces(BaseBusiness.java:35) [bin/:?]
+	at vn.vnest.httphandler.TopicManager.process(TopicManager.java:32) [bin/:?]
+	at vn.vnest.server.HttpServerHandler.decodeData(HttpServerHandler.java:86) [bin/:?]
+	at vn.vnest.server.HttpServerHandler.channelRead0(HttpServerHandler.java:136) [bin/:?]
+	at vn.vnest.server.HttpServerHandler.channelRead0(HttpServerHandler.java:1) [bin/:?]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:310) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:284) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:138) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138) [netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2020-07-29 23:12:50,582 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-4] Response:{"code":"0","description":"Fail"}
+2020-07-29 23:12:50,584 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write:{"code":"0","description":"Fail"}
+2020-07-29 23:12:50,587 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write to client:200 OK
+2020-07-29 23:12:50,589 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Close channel of 
+2020-07-29 23:12:50,591 INFO v.v.s.MyChannel [nioEventLoopGroup-3-4] Close is done!
+2020-07-29 23:12:50,593 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Channel inactive!
+2020-07-29 23:13:08,426 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Request info: value={
+    "agentCode":"123",
+    "userName":"0976123321",
+    "password":"1"
+}, host=0:0:0:0:0:0:0:1, topic=/agentlogin
+2020-07-29 23:13:08,427 INFO v.v.h.TopicManager [nioEventLoopGroup-3-6] data: {
+    "agentCode":"123",
+    "userName":"0976123321",
+    "password":"1"
+}
+2020-07-29 23:13:08,445 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Channel inactive!
+2020-07-29 23:13:08,448 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Close channel of 
+2020-07-29 23:13:09,060 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-6] Response:{"token":"f64dc0bd19984d01bcb84d65aaf43cc7","code":"1","description":"Success"}
+2020-07-29 23:13:09,062 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write:{"token":"f64dc0bd19984d01bcb84d65aaf43cc7","code":"1","description":"Success"}
+2020-07-29 23:13:09,064 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write to client:200 OK
+2020-07-29 23:13:09,067 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Close channel of 
+2020-07-29 23:13:09,068 INFO v.v.s.MyChannel [nioEventLoopGroup-3-6] Close is done!
+2020-07-29 23:13:09,070 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Channel inactive!
+2020-07-29 23:14:43,668 INFO v.v.m.Constant [Thread-1] ReadingConfig complete:
+2020-07-29 23:14:43,668 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoDevice - GET_getinfodevice
+2020-07-29 23:14:43,671 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.DeviceLogin - POST_devicelogin
+2020-07-29 23:14:43,671 INFO v.v.m.Constant [Thread-1] port=1304
+ rasaUrl=http://localhost:5050/model/parse?emulation_mode=dialogflow
+ prefixTopic=/
+ s2tUrl=http://localhost:9090
+ t2sUrl=http://localhost:9091
+ mapUrl=http://localhost:9092
+ mediaUrl=http://localhost:9093
+2020-07-29 23:14:43,671 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.HistoryAppointment - POST_historyappointment
+2020-07-29 23:14:43,672 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoAppointment - GET_getinfoappointment
+2020-07-29 23:14:43,672 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.DeviceService - POST_deviceservice
+2020-07-29 23:14:43,672 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoDeviceService - GET_getinfodeviceservice
+2020-07-29 23:14:43,672 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.CreateActivationCode - POST_createactivationcode
+2020-07-29 23:14:43,673 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetActivationCode - GET_getactivationcode
+2020-07-29 23:14:43,673 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.ActiveDevice - POST_activedevice
+2020-07-29 23:14:43,673 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetAgent - GET_getagent
+2020-07-29 23:14:43,673 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.CreateAgent - POST_createagent
+2020-07-29 23:14:43,674 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.AgentLogin - POST_agentlogin
+2020-07-29 23:14:43,907 INFO v.v.s.HttpServer [main] ERROR
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_252]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[?:1.8.0_252]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[?:1.8.0_252]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:220) ~[?:1.8.0_252]
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:128) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:558) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1283) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:501) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:486) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.handler.logging.LoggingHandler.bind(LoggingHandler.java:191) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:501) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:486) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:989) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:254) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:364) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_252]
+2020-07-29 23:15:02,358 INFO v.v.m.Constant [Thread-1] ReadingConfig complete:
+2020-07-29 23:15:02,358 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoDevice - GET_getinfodevice
+2020-07-29 23:15:02,363 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.DeviceLogin - POST_devicelogin
+2020-07-29 23:15:02,363 INFO v.v.m.Constant [Thread-1] port=1304
+ rasaUrl=http://localhost:5050/model/parse?emulation_mode=dialogflow
+ prefixTopic=/
+ s2tUrl=http://localhost:9090
+ t2sUrl=http://localhost:9091
+ mapUrl=http://localhost:9092
+ mediaUrl=http://localhost:9093
+2020-07-29 23:15:02,364 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.HistoryAppointment - POST_historyappointment
+2020-07-29 23:15:02,364 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoAppointment - GET_getinfoappointment
+2020-07-29 23:15:02,364 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.DeviceService - POST_deviceservice
+2020-07-29 23:15:02,364 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoDeviceService - GET_getinfodeviceservice
+2020-07-29 23:15:02,364 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.CreateActivationCode - POST_createactivationcode
+2020-07-29 23:15:02,365 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetActivationCode - GET_getactivationcode
+2020-07-29 23:15:02,365 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.ActiveDevice - POST_activedevice
+2020-07-29 23:15:02,365 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetAgent - GET_getagent
+2020-07-29 23:15:02,365 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.CreateAgent - POST_createagent
+2020-07-29 23:15:02,366 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.AgentLogin - POST_agentlogin
+2020-07-29 23:15:02,611 INFO v.v.s.HttpServer [main] ERROR
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_252]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[?:1.8.0_252]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[?:1.8.0_252]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:220) ~[?:1.8.0_252]
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:128) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:558) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1283) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:501) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:486) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.handler.logging.LoggingHandler.bind(LoggingHandler.java:191) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:501) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:486) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:989) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:254) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:364) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138) ~[netty-all-4.1.17.Final.jar:4.1.17.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_252]
+2020-07-29 23:15:45,839 INFO v.v.m.Constant [Thread-1] ReadingConfig complete:
+2020-07-29 23:15:45,839 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoDevice - GET_getinfodevice
+2020-07-29 23:15:45,842 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.DeviceLogin - POST_devicelogin
+2020-07-29 23:15:45,842 INFO v.v.m.Constant [Thread-1] port=1304
+ rasaUrl=http://localhost:5050/model/parse?emulation_mode=dialogflow
+ prefixTopic=/
+ s2tUrl=http://localhost:9090
+ t2sUrl=http://localhost:9091
+ mapUrl=http://localhost:9092
+ mediaUrl=http://localhost:9093
+2020-07-29 23:15:45,843 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.HistoryAppointment - POST_historyappointment
+2020-07-29 23:15:45,843 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoAppointment - GET_getinfoappointment
+2020-07-29 23:15:45,843 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.DeviceService - POST_deviceservice
+2020-07-29 23:15:45,843 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetInfoDeviceService - GET_getinfodeviceservice
+2020-07-29 23:15:45,843 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.CreateActivationCode - POST_createactivationcode
+2020-07-29 23:15:45,843 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetActivationCode - GET_getactivationcode
+2020-07-29 23:15:45,844 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.ActiveDevice - POST_activedevice
+2020-07-29 23:15:45,844 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetAgent - GET_getagent
+2020-07-29 23:15:45,844 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.CreateAgent - POST_createagent
+2020-07-29 23:15:45,844 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.AgentLogin - POST_agentlogin
+2020-07-29 23:15:52,288 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Channel inactive!
+2020-07-29 23:15:52,290 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Close channel of 
+2020-07-29 23:15:52,355 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Request info: value={
+    "agentCode":"123",
+    "userName":"0976123321",
+    "password":"1"
+}, host=0:0:0:0:0:0:0:1, topic=/agentlogin
+2020-07-29 23:15:52,422 INFO v.v.h.TopicManager [nioEventLoopGroup-3-2] data: {
+    "agentCode":"123",
+    "userName":"0976123321",
+    "password":"1"
+}
+2020-07-29 23:16:24,485 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-2] Response:{"token":"8e2f14fe836e42e78d81b085f8697fba","code":"1","description":"Success"}
+2020-07-29 23:16:24,487 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Write:{"token":"8e2f14fe836e42e78d81b085f8697fba","code":"1","description":"Success"}
+2020-07-29 23:16:24,493 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Write to client:200 OK
+2020-07-29 23:16:24,497 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Close channel of 
+2020-07-29 23:16:24,498 INFO v.v.s.MyChannel [nioEventLoopGroup-3-2] Close is done!
+2020-07-29 23:16:24,499 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Channel inactive!
