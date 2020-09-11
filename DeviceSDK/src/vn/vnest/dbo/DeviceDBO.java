@@ -252,17 +252,18 @@ public class DeviceDBO {
 		try {
 			con = DeviceDataSource.getInstance().getConnection();
 			if (con != null) {
-				String sql = "{Call insertDevicesService(?,?,?,?,?,?,?,?)}";
+				String sql = "{Call insertDevicesService(?,?,?,?,?,?,?,?,?)}";
 				cs = con.prepareCall(sql);
 				cs.clearParameters();
 				cs.setString(1, deviceService.getDeviceId());
 				cs.setString(2, deviceService.getAction());
 				cs.setTimestamp(3, parseDatePost(deviceService.getStartDate()));
 				cs.setTimestamp(4, parseDatePost(deviceService.getEndDate()));
-				cs.setDouble(5, !deviceService.getAmount().isEmpty() ? Double.parseDouble(deviceService.getAmount()) : 0);
-				cs.setInt(6, !deviceService.getCount().isEmpty() ? Integer.parseInt(deviceService.getCount()) : 1);
-				cs.setInt(7, !deviceService.getQuantity().isEmpty()  ? Integer.parseInt(deviceService.getQuantity()) : 1);
+				cs.setDouble(5, deviceService.getAmount() !=null && !deviceService.getAmount().isEmpty() ? Double.parseDouble(deviceService.getAmount()) : 0);
+				cs.setInt(6, deviceService.getCount() !=null && !deviceService.getCount().isEmpty() ? Integer.parseInt(deviceService.getCount()) : 1);
+				cs.setInt(7, deviceService.getQuantity() !=null && !deviceService.getQuantity().isEmpty()  ? Integer.parseInt(deviceService.getQuantity()) : 1);
 				cs.setString(8, deviceService.getQuestion());
+				cs.setString(9, deviceService.getObject());
 				rs = cs.executeQuery();
 				if (rs != null && rs.next()) {
 					res = rs.getInt("res");
@@ -282,7 +283,7 @@ public class DeviceDBO {
 	}
 
 	public static ArrayList<DeviceServiceRequest> getInfoDeviceService(String id, String stDate, String eDate,
-			String at, String c, String q, String mount) throws Exception {
+			String at, String c, String q, String mount, String obj) throws Exception {
 		ArrayList<DeviceServiceRequest> infoDeviceService = new ArrayList<DeviceServiceRequest>();
 		Connection connection = null;
 		CallableStatement st = null;
@@ -291,7 +292,7 @@ public class DeviceDBO {
 		try {
 			connection = DeviceDataSource.getInstance().getConnection();
 			if (connection != null) {
-				String sql = "{Call getInfoDeviceService(?,?,?,?,?,?,?)}";
+				String sql = "{Call getInfoDeviceService(?,?,?,?,?,?,?,?)}";
 				st = connection.prepareCall(sql);
 				st.clearParameters();
 				st.setString(1, id);
@@ -301,6 +302,7 @@ public class DeviceDBO {
 				st.setString(5, c);
 				st.setString(6, q);
 				st.setString(7, mount);
+				st.setString(8, obj == null ? null : URLDecoder.decode(obj, StandardCharsets.UTF_8.name()));
 				rs = st.executeQuery();
 				if (rs != null) {
 					while (rs.next()) {
@@ -311,8 +313,9 @@ public class DeviceDBO {
 						String count = rs.getString("count");
 						String quantity = rs.getString("quantity");
 						String amount = rs.getString("amount");
+						String object = rs.getString("object");
 						DeviceServiceRequest info = new DeviceServiceRequest(deviceId, action, startDate, endDate,
-								amount, count, quantity);
+								amount, count, quantity, object);
 						infoDeviceService.add(info);
 					}
 				}

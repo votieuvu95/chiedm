@@ -30,9 +30,11 @@ public class GetInfoDeviceService extends BaseBusiness {
 		String count = params.get("count");
 		String quantity = params.get("quantity");
 		String amount = params.get("amount");
+		String object = params.get("object");
 
 		try {
-			ArrayList<DeviceServiceRequest> resquest = DeviceDBO.getInfoDeviceService(deviceId,startDate,endDate,action,count,quantity,amount);
+			ArrayList<DeviceServiceRequest> resquest = DeviceDBO.getInfoDeviceService(deviceId,startDate,
+					endDate,action,count,quantity,amount,object);
 			return new GetDeviceServiceResponse(resquest);
 		} catch (Exception e) {
 			logger.info("", e);

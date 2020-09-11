@@ -1,16 +1,15 @@
 package vn.vnest.request;
 
-import java.math.BigDecimal;
 
 public class DeviceServiceRequest {
-	private String deviceId,action,startDate,endDate,question;
+	private String deviceId,action,startDate,endDate,question,object;
 	private String amount;
 	private String count,quantity;
 	
 	
 	
 	public DeviceServiceRequest(String deviceId, String action, String startDate, String endDate,
-			String amount, String count, String quantity) {
+			String amount, String count, String quantity, String object) {
 		super();
 		this.deviceId = deviceId;
 		this.action = action;
@@ -19,6 +18,7 @@ public class DeviceServiceRequest {
 		this.amount = amount;
 		this.count = count;
 		this.quantity = quantity;
+		this.object = object;
 	}
 	
 	public String getDeviceId() {
@@ -71,6 +71,15 @@ public class DeviceServiceRequest {
 	public void setQuestion(String question) {
 		this.question = question;
 	}
+
+	public String getObject() {
+		return object;
+	}
+
+	public void setObject(String object) {
+		this.object = object;
+	}
+	
 
 	
 }
