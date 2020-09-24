@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project PriceSDK with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/PriceSDK.jar">
+            <manifest>
+                <attribute name="Main-Class" value="vn.vnest.main.Main"/>
+                <attribute name="Class-Path" value=". PriceSDK_lib/jsoup-1.7.2.jar PriceSDK_lib/netty-all-4.1.17.Final.jar PriceSDK_lib/log4j-1.2.16.jar PriceSDK_lib/log4j-api-2.13.1.jar PriceSDK_lib/log4j-core-2.13.1.jar PriceSDK_lib/gson2.2.4.jar"/>
+            </manifest>
+            <fileset dir="${dir.jarfile}/bin"/>
+        </jar>
+     
+    </target>
+</project>
