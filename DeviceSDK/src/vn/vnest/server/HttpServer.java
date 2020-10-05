@@ -15,11 +15,12 @@
  */
 package vn.vnest.server;
 
-
 import vn.vnest.main.Constant;
+
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -37,7 +38,6 @@ import io.netty.handler.ssl.SslHandler;
  */
 public final class HttpServer {
 	private static final Logger log = LogManager.getLogger(HttpServer.class);
-
 	public static void start() throws Exception {
 
 		EventLoopGroup bossGroup = new NioEventLoopGroup(1);
@@ -52,10 +52,10 @@ public final class HttpServer {
 			b.channel(NioServerSocketChannel.class);
 			b.handler(new LoggingHandler(LogLevel.INFO));
 			SslHandler sslHandler = null;
-//			if (Constant.useSSL) {
-//				SSLHandlerProvider.initSSLContext();
-//				sslHandler = SSLHandlerProvider.getSSLHandler();
-//			}
+			// if (Constant.useSSL) {
+			// SSLHandlerProvider.initSSLContext();
+			// sslHandler = SSLHandlerProvider.getSSLHandler();
+			// }
 			b.childHandler(new HttpServerInitializer(sslHandler));
 
 			Channel ch = b.bind(Constant.getPort()).sync().channel();

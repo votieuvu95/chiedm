@@ -9,7 +9,6 @@ import com.google.gson.Gson;
 import vn.vnest.business.BusinessManager;
 import vn.vnest.business.IBusiness;
 import vn.vnest.respone.BaseResponse;
-import vn.vnest.utils.GsonUtils;
 import io.netty.handler.codec.http.HttpHeaders;
 import io.netty.handler.codec.http.HttpMethod;
 
@@ -22,6 +21,7 @@ public class TopicManager {
 		HashMap<String, String> params = new HashMap<>();
 		String[] temp = processingTopic(topic, params);
 		String subTopic = temp[0].replace("//", "").toLowerCase();
+		
 		try {
 			String methodName = method.name().toUpperCase();
 			String businessTopic = methodName + "_" + subTopic;

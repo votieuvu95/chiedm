@@ -14,6 +14,7 @@ public class Constant {
 
 	private static int port = 8082;
 	public static final String configFileName = "conf/base.properties";
+	private static  String url = "http://localhost:9196/pricegas?object=fueloil";
 	
 	private static String rasaUrl = "http://localhost:5050/model/parse?emulation_mode=dialogflow";
 	private static String s2tUrl = "http://localhost:9090";
@@ -46,8 +47,12 @@ public class Constant {
 	public static String getPrefixTopic() {
 		return prefixTopic;
 	}
+	
+	public static String getUrl() {
+		return url;
+	}
 
-//	public static void init() {
+	//	public static void init() {
 //		Properties appConfig = new Properties();
 //		try {
 //			appConfig.load(new FileInputStream(configFileName));
@@ -78,6 +83,7 @@ public class Constant {
 			t2sUrl = appConfig.getProperty("t2sUrl", t2sUrl);
 			mapUrl = appConfig.getProperty("mapUrl", mapUrl);
 			mediaUrl = appConfig.getProperty("mediaUrl", mediaUrl);
+			url = appConfig.getProperty("url",url);
 			log.info("ReadingConfig complete:");
 			log.info("port=" + port 
 					+ "\n rasaUrl=" + rasaUrl 

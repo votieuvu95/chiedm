@@ -1,5 +1,6 @@
 package vn.vnest.dbo;
 
+import java.io.IOException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.sql.CallableStatement;
@@ -18,11 +19,15 @@ import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
 import redis.clients.jedis.Jedis;
 import vn.vnest.cache.JedisFactory;
 import vn.vnest.entities.InfoAgent;
 import vn.vnest.entities.InfoAppointment;
 import vn.vnest.entities.InfoDevice;
+import vn.vnest.main.Constant;
 import vn.vnest.request.ActiveDeviceRequest;
 import vn.vnest.request.AgentAccountRequest;
 import vn.vnest.request.AgentLoginRequest;
@@ -31,7 +36,9 @@ import vn.vnest.request.CreateAgentRequest;
 import vn.vnest.request.DeviceLoginRequest;
 import vn.vnest.request.DeviceServiceRequest;
 import vn.vnest.request.HistoryAppointmentRequest;
+import vn.vnest.server.HttpClient;
 import vn.vnest.utils.Utils;
+
 
 public class DeviceDBO {
 	private static final Logger log = LogManager.getLogger(DeviceDBO.class);
@@ -249,6 +256,26 @@ public class DeviceDBO {
 		Connection con = null;
 		CallableStatement cs = null;
 		ResultSet rs = null;
+		int quantity = 1;
+		int amounttotal = 0;
+
+		int price = getPrice(deviceService.getObject());
+
+		if ((deviceService.getObject() != null && !deviceService.getObject().isEmpty()) && price > 0) {
+
+			if (deviceService.getQuantity() != null && !deviceService.getQuantity().isEmpty()
+					&& (deviceService.getAmount() == null || deviceService.getAmount().isEmpty() )) {
+				amounttotal = Integer.parseInt(deviceService.getQuantity()) * price;
+			}
+
+			if ((deviceService.getAmount() != null  && !deviceService.getAmount().isEmpty())
+					&& (deviceService.getQuantity() == null || deviceService.getQuantity().isEmpty())) {
+				quantity = Integer.parseInt(deviceService.getAmount()) / price;
+
+			}
+		}
+
+		
 		try {
 			con = DeviceDataSource.getInstance().getConnection();
 			if (con != null) {
@@ -259,9 +286,9 @@ public class DeviceDBO {
 				cs.setString(2, deviceService.getAction());
 				cs.setTimestamp(3, parseDatePost(deviceService.getStartDate()));
 				cs.setTimestamp(4, parseDatePost(deviceService.getEndDate()));
-				cs.setDouble(5, deviceService.getAmount() !=null && !deviceService.getAmount().isEmpty() ? Double.parseDouble(deviceService.getAmount()) : 0);
+				cs.setDouble(5, amounttotal > 0 ? amounttotal : (deviceService.getAmount() !=null && !deviceService.getAmount().isEmpty() ? Double.parseDouble(deviceService.getAmount()) : 0));
 				cs.setInt(6, deviceService.getCount() !=null && !deviceService.getCount().isEmpty() ? Integer.parseInt(deviceService.getCount()) : 1);
-				cs.setInt(7, deviceService.getQuantity() !=null && !deviceService.getQuantity().isEmpty()  ? Integer.parseInt(deviceService.getQuantity()) : 1);
+				cs.setInt(7, quantity > 1 ? quantity : (deviceService.getQuantity() !=null && !deviceService.getQuantity().isEmpty()  ? Integer.parseInt(deviceService.getQuantity()) : 1));
 				cs.setString(8, deviceService.getQuestion());
 				cs.setString(9, deviceService.getObject());
 				rs = cs.executeQuery();
@@ -283,12 +310,26 @@ public class DeviceDBO {
 	}
 
 	public static ArrayList<DeviceServiceRequest> getInfoDeviceService(String id, String stDate, String eDate,
-			String at, String c, String q, String mount, String obj) throws Exception {
+			String at, String co, String qa, String mount, String obj) throws Exception {
 		ArrayList<DeviceServiceRequest> infoDeviceService = new ArrayList<DeviceServiceRequest>();
 		Connection connection = null;
 		CallableStatement st = null;
 		ResultSet rs = null;
-
+		
+//		int quanti = 1;
+//		int amounttotal = 0;
+//
+//		int price = getPrice(obj);
+//		if (obj != null && price > 0) {
+//
+//			if (qa == null && mount != null) {
+//				quanti = Integer.parseInt(mount) / price;
+//			}
+//
+//			if (qa != null && mount == null) {
+//				amounttotal = Integer.parseInt(qa) * price;
+//			}
+//		}
 		try {
 			connection = DeviceDataSource.getInstance().getConnection();
 			if (connection != null) {
@@ -299,8 +340,8 @@ public class DeviceDBO {
 				st.setString(2, parseDateGet(stDate));
 				st.setString(3, parseDateGet(eDate));
 				st.setString(4, URLDecoder.decode(at, StandardCharsets.UTF_8.name()));
-				st.setString(5, c);
-				st.setString(6, q);
+				st.setString(5, co);
+				st.setString(6, qa);
 				st.setString(7, mount);
 				st.setString(8, obj == null ? null : URLDecoder.decode(obj, StandardCharsets.UTF_8.name()));
 				rs = st.executeQuery();
@@ -315,7 +356,7 @@ public class DeviceDBO {
 						String amount = rs.getString("amount");
 						String object = rs.getString("object");
 						DeviceServiceRequest info = new DeviceServiceRequest(deviceId, action, startDate, endDate,
-								amount, count, quantity, object);
+								amount, count, quantity , object);
 						infoDeviceService.add(info);
 					}
 				}
@@ -340,7 +381,7 @@ public class DeviceDBO {
 		CallableStatement cs = null;
 		ResultSet rs = null;
 		try {
-			Jedis jd = JedisFactory.getInstance().getJedisPool().getResource();
+			Jedis jd = JedisFactory.getInstance().getJedisPool();
 			con = DeviceDataSource.getInstance().getConnection();
 			if (con != null) {
 				String sql = "{Call createActivationCode(?,?)}";
@@ -520,7 +561,7 @@ public class DeviceDBO {
 				st.setString(3, request.getPassWord());
 				rs = st.executeQuery();
 				if (rs != null && rs.next()) {
-					Jedis jd = JedisFactory.getInstance().getJedisPool().getResource();
+					Jedis jd = JedisFactory.getInstance().getJedisPool();
 					token = Utils.UURanDom();
 //					set String redis
 					 jd.set(request.getUserName(), token); 
@@ -542,6 +583,26 @@ public class DeviceDBO {
 
 		return token;
 
+	}
+	
+	
+	public static int getPrice(String obj) throws IOException {
+		int i = 0;
+
+		if (obj == null) {
+			return 0;
+		}
+
+		HttpClient client = new HttpClient();
+		String data = client.get(Constant.getUrl() + obj);
+
+		Gson gson = new Gson();
+		JsonObject jo = gson.fromJson(data, JsonObject.class);
+		data = jo.get("price").getAsString().replace(".", "");
+
+		i = Integer.parseInt(data);
+
+		return i;
 	}
 
 }

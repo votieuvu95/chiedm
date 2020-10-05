@@ -10,10 +10,11 @@
         <jar destfile="${dir.jarfile}/PriceSDK.jar">
             <manifest>
                 <attribute name="Main-Class" value="vn.vnest.main.Main"/>
-                <attribute name="Class-Path" value=". PriceSDK_lib/jsoup-1.7.2.jar PriceSDK_lib/netty-all-4.1.17.Final.jar PriceSDK_lib/log4j-1.2.16.jar PriceSDK_lib/log4j-api-2.13.1.jar PriceSDK_lib/log4j-core-2.13.1.jar PriceSDK_lib/gson2.2.4.jar"/>
+                <attribute name="Class-Path" value=". PriceSDK_lib/jsoup-1.7.2.jar PriceSDK_lib/netty-all-4.1.17.Final.jar PriceSDK_lib/log4j-1.2.16.jar PriceSDK_lib/log4j-api-2.13.1.jar PriceSDK_lib/log4j-core-2.13.1.jar PriceSDK_lib/gson2.2.4.jar PriceSDK_lib/jedis-3.1.0.jar PriceSDK_lib/commons-pool2-2.8.0.jar PriceSDK_lib/slf4j-api-1.6.1.jar PriceSDK_lib/slf4j-log4j12-1.6.1.jar"/>
             </manifest>
             <fileset dir="${dir.jarfile}/bin"/>
         </jar>
+        <delete dir="${dir.jarfile}/PriceSDK_lib"/>
      
     </target>
 </project>
