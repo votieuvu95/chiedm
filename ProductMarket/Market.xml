@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project ProductMarket with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/ProductMarket.jar">
+            <manifest>
+                <attribute name="Main-Class" value="vn.vnest.main.HTTPServer"/>
+                <attribute name="Class-Path" value=". ProductMarket_lib/bcprov-jdk16-146.jar ProductMarket_lib/bonecp-0.8.0.RELEASE.jar ProductMarket_lib/byte-buddy-1.8.3.jar ProductMarket_lib/client-combined-3.13.0.jar ProductMarket_lib/commons-codec-1.7.jar ProductMarket_lib/commons-exec-1.3.jar ProductMarket_lib/commons-io-1.4.jar ProductMarket_lib/commons-logging-1.1.1.jar ProductMarket_lib/commons-pool2-2.8.0.jar ProductMarket_lib/google-http-client-1.23.0.jar ProductMarket_lib/google-http-client-appengine-1.23.0.jar ProductMarket_lib/google-http-client-gson-1.23.0.jar ProductMarket_lib/google-http-client-jackson-1.23.0.jar ProductMarket_lib/google-http-client-jackson2-1.23.0.jar ProductMarket_lib/google-http-client-jdo-1.23.0.jar ProductMarket_lib/google-http-client-protobuf-1.23.0.jar ProductMarket_lib/google-http-client-xml-1.23.0.jar ProductMarket_lib/gson2.2.4.jar ProductMarket_lib/guava-25.0-jre.jar ProductMarket_lib/httpclient-4.5.6.jar ProductMarket_lib/httpcore-4.4.9.jar ProductMarket_lib/jackson-core-2.1.3.jar ProductMarket_lib/jackson-core-asl-1.9.11.jar ProductMarket_lib/jedis-3.1.0.jar ProductMarket_lib/jsoup-1.13.1.jar ProductMarket_lib/log4j-1.2.16.jar ProductMarket_lib/log4j-api-2.13.1.jar ProductMarket_lib/log4j-core-2.13.1.jar ProductMarket_lib/mysql-connector-java-5.1.6-bin.jar ProductMarket_lib/netty-all-4.1.17.Final.jar ProductMarket_lib/okhttp-3.10.0.jar ProductMarket_lib/okio-1.14.1.jar ProductMarket_lib/slf4j-api-1.6.1.jar ProductMarket_lib/slf4j-log4j12-1.6.1.jar"/>
+            </manifest>
+            <fileset dir="${dir.jarfile}/bin"/>
+        </jar>
+        <delete dir="${dir.jarfile}/ProductMarket_lib"/>
+        <mkdir dir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/bcprov-jdk16-146.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/bonecp-0.8.0.RELEASE.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/byte-buddy-1.8.3.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/client-combined-3.13.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/commons-codec-1.7.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/commons-exec-1.3.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/commons-io-1.4.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/commons-logging-1.1.1.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/commons-pool2-2.8.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/google-http-client-1.23.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/google-http-client-appengine-1.23.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/google-http-client-gson-1.23.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/google-http-client-jackson-1.23.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/google-http-client-jackson2-1.23.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/google-http-client-jdo-1.23.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/google-http-client-protobuf-1.23.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/google-http-client-xml-1.23.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/gson2.2.4.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/guava-25.0-jre.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/httpclient-4.5.6.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/httpcore-4.4.9.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/jackson-core-2.1.3.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/jackson-core-asl-1.9.11.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/jedis-3.1.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/jsoup-1.13.1.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/log4j-1.2.16.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/log4j-api-2.13.1.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/log4j-core-2.13.1.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/mysql-connector-java-5.1.6-bin.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/netty-all-4.1.17.Final.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/okhttp-3.10.0.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/okio-1.14.1.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/slf4j-api-1.6.1.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+        <copy file="${dir.jarfile}/libs/slf4j-log4j12-1.6.1.jar" todir="${dir.jarfile}/ProductMarket_lib"/>
+    </target>
+</project>

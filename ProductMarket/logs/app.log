@@ -1,0 +1,420 @@
+2020-10-15 00:08:09,241 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetProductMarketUpdate - GET_getproductupdate
+2020-10-15 00:08:09,256 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.InsertPriceMartket - POST_insertpricemarket
+2020-10-15 00:08:09,256 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.UpdatePriceMarket - POST_updatepricemarket
+2020-10-15 00:08:09,257 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.InsertMarket - POST_insertmarket
+2020-10-15 00:08:09,257 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.UpdateMarket - POST_updatemarket
+2020-10-15 00:08:11,829 INFO v.v.m.Constant [Thread-1] ReadingConfig complete:
+2020-10-15 00:08:11,830 INFO v.v.m.Constant [Thread-1] port=9296
+ rasaUrl=http://localhost:5050/model/parse?emulation_mode=dialogflow
+ prefixTopic=/
+ s2tUrl=http://localhost:9090
+ t2sUrl=http://localhost:9091
+ mapUrl=http://localhost:9092
+ mediaUrl=http://localhost:9093
+2020-10-15 00:08:18,397 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetProductMarketUpdate - GET_getproductupdate
+2020-10-15 00:08:18,397 INFO v.v.m.Constant [Thread-1] ReadingConfig complete:
+2020-10-15 00:08:18,403 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.InsertPriceMartket - POST_insertpricemarket
+2020-10-15 00:08:18,403 INFO v.v.m.Constant [Thread-1] port=9296
+ rasaUrl=http://localhost:5050/model/parse?emulation_mode=dialogflow
+ prefixTopic=/
+ s2tUrl=http://localhost:9090
+ t2sUrl=http://localhost:9091
+ mapUrl=http://localhost:9092
+ mediaUrl=http://localhost:9093
+2020-10-15 00:08:18,404 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.UpdatePriceMarket - POST_updatepricemarket
+2020-10-15 00:08:18,405 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.InsertMarket - POST_insertmarket
+2020-10-15 00:08:18,405 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.UpdateMarket - POST_updatemarket
+2020-10-15 00:10:13,460 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:13,499 INFO v.v.h.TopicManager [nioEventLoopGroup-3-1] data: 
+2020-10-15 00:10:23,363 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:23,365 INFO v.v.h.TopicManager [nioEventLoopGroup-3-2] data: 
+2020-10-15 00:10:32,245 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-1] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:32,248 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:32,252 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write to client:200 OK
+2020-10-15 00:10:32,290 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Close channel of 
+2020-10-15 00:10:32,290 INFO v.v.s.MyChannel [nioEventLoopGroup-3-1] Close is done!
+2020-10-15 00:10:32,294 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Channel inactive!
+2020-10-15 00:10:33,380 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:33,381 INFO v.v.h.TopicManager [nioEventLoopGroup-3-3] data: 
+2020-10-15 00:10:33,865 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-3] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:33,866 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:33,867 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Write to client:200 OK
+2020-10-15 00:10:33,869 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Close channel of 
+2020-10-15 00:10:33,870 INFO v.v.s.MyChannel [nioEventLoopGroup-3-3] Close is done!
+2020-10-15 00:10:33,871 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Channel inactive!
+2020-10-15 00:10:33,962 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:33,963 INFO v.v.h.TopicManager [nioEventLoopGroup-3-4] data: 
+2020-10-15 00:10:34,445 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-4] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:34,446 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:34,447 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write to client:200 OK
+2020-10-15 00:10:34,449 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Close channel of 
+2020-10-15 00:10:34,450 INFO v.v.s.MyChannel [nioEventLoopGroup-3-4] Close is done!
+2020-10-15 00:10:34,452 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Channel inactive!
+2020-10-15 00:10:34,464 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:34,466 INFO v.v.h.TopicManager [nioEventLoopGroup-3-5] data: 
+2020-10-15 00:10:34,950 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-5] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:34,951 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:34,952 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Write to client:200 OK
+2020-10-15 00:10:34,954 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Close channel of 
+2020-10-15 00:10:34,955 INFO v.v.s.MyChannel [nioEventLoopGroup-3-5] Close is done!
+2020-10-15 00:10:34,956 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Channel inactive!
+2020-10-15 00:10:34,965 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:34,968 INFO v.v.h.TopicManager [nioEventLoopGroup-3-6] data: 
+2020-10-15 00:10:35,456 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-6] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:35,457 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:35,458 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write to client:200 OK
+2020-10-15 00:10:35,460 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Close channel of 
+2020-10-15 00:10:35,461 INFO v.v.s.MyChannel [nioEventLoopGroup-3-6] Close is done!
+2020-10-15 00:10:35,462 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Channel inactive!
+2020-10-15 00:10:35,471 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:35,473 INFO v.v.h.TopicManager [nioEventLoopGroup-3-7] data: 
+2020-10-15 00:10:35,961 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-7] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:35,962 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:35,963 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Write to client:200 OK
+2020-10-15 00:10:35,965 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Close channel of 
+2020-10-15 00:10:35,965 INFO v.v.s.MyChannel [nioEventLoopGroup-3-7] Close is done!
+2020-10-15 00:10:35,966 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Channel inactive!
+2020-10-15 00:10:35,976 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:35,978 INFO v.v.h.TopicManager [nioEventLoopGroup-3-8] data: 
+2020-10-15 00:10:36,459 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-8] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:36,460 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:36,460 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Write to client:200 OK
+2020-10-15 00:10:36,461 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Close channel of 
+2020-10-15 00:10:36,461 INFO v.v.s.MyChannel [nioEventLoopGroup-3-8] Close is done!
+2020-10-15 00:10:36,462 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Channel inactive!
+2020-10-15 00:10:36,466 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:36,467 INFO v.v.h.TopicManager [nioEventLoopGroup-3-9] data: 
+2020-10-15 00:10:36,958 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-9] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:36,958 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:36,959 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Write to client:200 OK
+2020-10-15 00:10:36,960 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Close channel of 
+2020-10-15 00:10:36,960 INFO v.v.s.MyChannel [nioEventLoopGroup-3-9] Close is done!
+2020-10-15 00:10:36,961 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Channel inactive!
+2020-10-15 00:10:36,966 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:36,968 INFO v.v.h.TopicManager [nioEventLoopGroup-3-10] data: 
+2020-10-15 00:10:37,446 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-10] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:37,447 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:37,448 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Write to client:200 OK
+2020-10-15 00:10:37,449 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Close channel of 
+2020-10-15 00:10:37,450 INFO v.v.s.MyChannel [nioEventLoopGroup-3-10] Close is done!
+2020-10-15 00:10:37,451 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Channel inactive!
+2020-10-15 00:10:37,459 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:37,461 INFO v.v.h.TopicManager [nioEventLoopGroup-3-11] data: 
+2020-10-15 00:10:37,947 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-11] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:37,948 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:37,949 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Write to client:200 OK
+2020-10-15 00:10:37,951 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Close channel of 
+2020-10-15 00:10:37,951 INFO v.v.s.MyChannel [nioEventLoopGroup-3-11] Close is done!
+2020-10-15 00:10:37,952 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Channel inactive!
+2020-10-15 00:10:37,962 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:37,964 INFO v.v.h.TopicManager [nioEventLoopGroup-3-12] data: 
+2020-10-15 00:10:38,444 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-12] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:38,445 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:38,445 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Write to client:200 OK
+2020-10-15 00:10:38,447 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Close channel of 
+2020-10-15 00:10:38,447 INFO v.v.s.MyChannel [nioEventLoopGroup-3-12] Close is done!
+2020-10-15 00:10:38,448 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Channel inactive!
+2020-10-15 00:10:38,452 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:38,453 INFO v.v.h.TopicManager [nioEventLoopGroup-3-13] data: 
+2020-10-15 00:10:38,939 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-13] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:38,940 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:38,941 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Write to client:200 OK
+2020-10-15 00:10:38,944 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Close channel of 
+2020-10-15 00:10:38,944 INFO v.v.s.MyChannel [nioEventLoopGroup-3-13] Close is done!
+2020-10-15 00:10:38,946 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Channel inactive!
+2020-10-15 00:10:38,953 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:38,954 INFO v.v.h.TopicManager [nioEventLoopGroup-3-14] data: 
+2020-10-15 00:10:39,437 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-14] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:39,438 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:39,438 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Write to client:200 OK
+2020-10-15 00:10:39,440 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Close channel of 
+2020-10-15 00:10:39,440 INFO v.v.s.MyChannel [nioEventLoopGroup-3-14] Close is done!
+2020-10-15 00:10:39,442 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Channel inactive!
+2020-10-15 00:10:39,449 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:39,450 INFO v.v.h.TopicManager [nioEventLoopGroup-3-15] data: 
+2020-10-15 00:10:39,934 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-15] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:39,935 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:39,936 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Write to client:200 OK
+2020-10-15 00:10:39,937 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Close channel of 
+2020-10-15 00:10:39,938 INFO v.v.s.MyChannel [nioEventLoopGroup-3-15] Close is done!
+2020-10-15 00:10:39,939 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Channel inactive!
+2020-10-15 00:10:39,946 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:39,948 INFO v.v.h.TopicManager [nioEventLoopGroup-3-16] data: 
+2020-10-15 00:10:40,452 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-16] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:40,453 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:40,453 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Write to client:200 OK
+2020-10-15 00:10:40,455 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Close channel of 
+2020-10-15 00:10:40,456 INFO v.v.s.MyChannel [nioEventLoopGroup-3-16] Close is done!
+2020-10-15 00:10:40,457 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Channel inactive!
+2020-10-15 00:10:40,463 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:40,463 INFO v.v.h.TopicManager [nioEventLoopGroup-3-1] data: 
+2020-10-15 00:10:40,907 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-2] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:40,908 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:40,909 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Write to client:200 OK
+2020-10-15 00:10:40,911 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Close channel of 
+2020-10-15 00:10:40,911 INFO v.v.s.MyChannel [nioEventLoopGroup-3-2] Close is done!
+2020-10-15 00:10:40,912 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Channel inactive!
+2020-10-15 00:10:40,947 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-1] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:40,948 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:40,949 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write to client:200 OK
+2020-10-15 00:10:40,951 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Close channel of 
+2020-10-15 00:10:40,952 INFO v.v.s.MyChannel [nioEventLoopGroup-3-1] Close is done!
+2020-10-15 00:10:40,953 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Channel inactive!
+2020-10-15 00:10:40,959 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:40,960 INFO v.v.h.TopicManager [nioEventLoopGroup-3-2] data: 
+2020-10-15 00:10:41,438 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-2] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:41,439 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:41,440 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Write to client:200 OK
+2020-10-15 00:10:41,441 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Close channel of 
+2020-10-15 00:10:41,442 INFO v.v.s.MyChannel [nioEventLoopGroup-3-2] Close is done!
+2020-10-15 00:10:41,442 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Channel inactive!
+2020-10-15 00:10:41,448 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:41,449 INFO v.v.h.TopicManager [nioEventLoopGroup-3-3] data: 
+2020-10-15 00:10:41,936 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-3] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:41,937 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:41,937 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Write to client:200 OK
+2020-10-15 00:10:41,938 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Close channel of 
+2020-10-15 00:10:41,939 INFO v.v.s.MyChannel [nioEventLoopGroup-3-3] Close is done!
+2020-10-15 00:10:41,939 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Channel inactive!
+2020-10-15 00:10:41,942 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:41,942 INFO v.v.h.TopicManager [nioEventLoopGroup-3-4] data: 
+2020-10-15 00:10:42,426 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-4] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:42,426 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:42,427 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write to client:200 OK
+2020-10-15 00:10:42,428 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Close channel of 
+2020-10-15 00:10:42,429 INFO v.v.s.MyChannel [nioEventLoopGroup-3-4] Close is done!
+2020-10-15 00:10:42,430 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Channel inactive!
+2020-10-15 00:10:42,436 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:42,436 INFO v.v.h.TopicManager [nioEventLoopGroup-3-5] data: 
+2020-10-15 00:10:42,922 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-5] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:42,923 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:42,923 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Write to client:200 OK
+2020-10-15 00:10:42,925 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Close channel of 
+2020-10-15 00:10:42,925 INFO v.v.s.MyChannel [nioEventLoopGroup-3-5] Close is done!
+2020-10-15 00:10:42,926 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Channel inactive!
+2020-10-15 00:10:42,933 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:42,934 INFO v.v.h.TopicManager [nioEventLoopGroup-3-6] data: 
+2020-10-15 00:10:43,410 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-6] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:43,411 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:43,411 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write to client:200 OK
+2020-10-15 00:10:43,412 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Close channel of 
+2020-10-15 00:10:43,412 INFO v.v.s.MyChannel [nioEventLoopGroup-3-6] Close is done!
+2020-10-15 00:10:43,413 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Channel inactive!
+2020-10-15 00:10:43,415 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:43,416 INFO v.v.h.TopicManager [nioEventLoopGroup-3-7] data: 
+2020-10-15 00:10:43,901 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-7] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:43,901 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:10:43,901 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Write to client:200 OK
+2020-10-15 00:10:43,902 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Close channel of 
+2020-10-15 00:10:43,902 INFO v.v.s.MyChannel [nioEventLoopGroup-3-7] Close is done!
+2020-10-15 00:10:43,902 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Channel inactive!
+2020-10-15 00:10:43,905 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:43,905 INFO v.v.h.TopicManager [nioEventLoopGroup-3-8] data: 
+2020-10-15 00:10:53,538 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetProductMarketUpdate - GET_getproductupdate
+2020-10-15 00:10:53,538 INFO v.v.m.Constant [Thread-1] ReadingConfig complete:
+2020-10-15 00:10:53,543 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.InsertPriceMartket - POST_insertpricemarket
+2020-10-15 00:10:53,543 INFO v.v.m.Constant [Thread-1] port=9296
+ rasaUrl=http://localhost:5050/model/parse?emulation_mode=dialogflow
+ prefixTopic=/
+ s2tUrl=http://localhost:9090
+ t2sUrl=http://localhost:9091
+ mapUrl=http://localhost:9092
+ mediaUrl=http://localhost:9093
+2020-10-15 00:10:53,543 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.UpdatePriceMarket - POST_updatepricemarket
+2020-10-15 00:10:53,543 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.InsertMarket - POST_insertmarket
+2020-10-15 00:10:53,543 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.UpdateMarket - POST_updatemarket
+2020-10-15 00:10:56,399 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:10:56,437 INFO v.v.h.TopicManager [nioEventLoopGroup-3-1] data: 
+2020-10-15 00:11:06,338 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:11:06,342 INFO v.v.h.TopicManager [nioEventLoopGroup-3-2] data: 
+2020-10-15 00:11:14,717 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-1] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:14,721 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:14,726 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write to client:200 OK
+2020-10-15 00:11:14,730 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Close channel of 
+2020-10-15 00:11:14,731 INFO v.v.s.MyChannel [nioEventLoopGroup-3-1] Close is done!
+2020-10-15 00:11:14,732 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Channel inactive!
+2020-10-15 00:11:16,346 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:11:16,346 INFO v.v.h.TopicManager [nioEventLoopGroup-3-3] data: 
+2020-10-15 00:11:16,830 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-3] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:16,831 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:16,832 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Write to client:200 OK
+2020-10-15 00:11:16,834 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Close channel of 
+2020-10-15 00:11:16,835 INFO v.v.s.MyChannel [nioEventLoopGroup-3-3] Close is done!
+2020-10-15 00:11:16,837 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Channel inactive!
+2020-10-15 00:11:16,891 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:11:16,892 INFO v.v.h.TopicManager [nioEventLoopGroup-3-4] data: 
+2020-10-15 00:11:17,376 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-4] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:17,377 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:17,377 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write to client:200 OK
+2020-10-15 00:11:17,378 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Close channel of 
+2020-10-15 00:11:17,379 INFO v.v.s.MyChannel [nioEventLoopGroup-3-4] Close is done!
+2020-10-15 00:11:17,379 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Channel inactive!
+2020-10-15 00:11:17,384 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:11:17,385 INFO v.v.h.TopicManager [nioEventLoopGroup-3-5] data: 
+2020-10-15 00:11:17,863 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-5] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:17,864 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:17,865 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Write to client:200 OK
+2020-10-15 00:11:17,867 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Close channel of 
+2020-10-15 00:11:17,868 INFO v.v.s.MyChannel [nioEventLoopGroup-3-5] Close is done!
+2020-10-15 00:11:17,870 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Channel inactive!
+2020-10-15 00:11:17,879 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:11:17,881 INFO v.v.h.TopicManager [nioEventLoopGroup-3-6] data: 
+2020-10-15 00:11:18,367 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-6] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:18,368 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:18,368 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write to client:200 OK
+2020-10-15 00:11:18,369 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Close channel of 
+2020-10-15 00:11:18,369 INFO v.v.s.MyChannel [nioEventLoopGroup-3-6] Close is done!
+2020-10-15 00:11:18,370 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Channel inactive!
+2020-10-15 00:11:18,375 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:11:18,376 INFO v.v.h.TopicManager [nioEventLoopGroup-3-7] data: 
+2020-10-15 00:11:18,860 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-7] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:18,861 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:11:18,862 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Write to client:200 OK
+2020-10-15 00:11:18,870 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Close channel of 
+2020-10-15 00:11:18,871 INFO v.v.s.MyChannel [nioEventLoopGroup-3-7] Close is done!
+2020-10-15 00:11:18,871 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Channel inactive!
+2020-10-15 00:11:18,880 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:11:18,882 INFO v.v.h.TopicManager [nioEventLoopGroup-3-8] data: 
+2020-10-15 00:12:27,481 INFO v.v.m.Constant [Thread-1] ReadingConfig complete:
+2020-10-15 00:12:27,481 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.GetProductMarketUpdate - GET_getproductupdate
+2020-10-15 00:12:27,483 INFO v.v.m.Constant [Thread-1] port=9296
+ rasaUrl=http://localhost:5050/model/parse?emulation_mode=dialogflow
+ prefixTopic=/
+ s2tUrl=http://localhost:9090
+ t2sUrl=http://localhost:9091
+ mapUrl=http://localhost:9092
+ mediaUrl=http://localhost:9093
+2020-10-15 00:12:27,483 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.InsertPriceMartket - POST_insertpricemarket
+2020-10-15 00:12:27,484 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.UpdatePriceMarket - POST_updatepricemarket
+2020-10-15 00:12:27,484 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.InsertMarket - POST_insertmarket
+2020-10-15 00:12:27,484 INFO v.v.b.BaseBusiness [main] Put: vn.vnest.business.detail.UpdateMarket - POST_updatemarket
+2020-10-15 00:12:32,469 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:32,500 INFO v.v.h.TopicManager [nioEventLoopGroup-3-1] data: 
+2020-10-15 00:12:42,388 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-2] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:42,392 INFO v.v.h.TopicManager [nioEventLoopGroup-3-2] data: 
+2020-10-15 00:12:50,368 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-1] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:50,371 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:50,375 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write to client:200 OK
+2020-10-15 00:12:50,381 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Close channel of 
+2020-10-15 00:12:50,381 INFO v.v.s.MyChannel [nioEventLoopGroup-3-1] Close is done!
+2020-10-15 00:12:50,382 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Channel inactive!
+2020-10-15 00:12:52,397 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:52,398 INFO v.v.h.TopicManager [nioEventLoopGroup-3-3] data: 
+2020-10-15 00:12:52,886 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-3] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:52,887 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:52,888 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Write to client:200 OK
+2020-10-15 00:12:52,891 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Close channel of 
+2020-10-15 00:12:52,892 INFO v.v.s.MyChannel [nioEventLoopGroup-3-3] Close is done!
+2020-10-15 00:12:52,893 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-3] Channel inactive!
+2020-10-15 00:12:52,943 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:52,944 INFO v.v.h.TopicManager [nioEventLoopGroup-3-4] data: 
+2020-10-15 00:12:53,425 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-4] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:53,426 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:53,427 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Write to client:200 OK
+2020-10-15 00:12:53,430 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Close channel of 
+2020-10-15 00:12:53,431 INFO v.v.s.MyChannel [nioEventLoopGroup-3-4] Close is done!
+2020-10-15 00:12:53,432 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-4] Channel inactive!
+2020-10-15 00:12:53,441 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:53,444 INFO v.v.h.TopicManager [nioEventLoopGroup-3-5] data: 
+2020-10-15 00:12:53,934 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-5] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:53,934 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:53,934 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Write to client:200 OK
+2020-10-15 00:12:53,935 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Close channel of 
+2020-10-15 00:12:53,935 INFO v.v.s.MyChannel [nioEventLoopGroup-3-5] Close is done!
+2020-10-15 00:12:53,936 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-5] Channel inactive!
+2020-10-15 00:12:53,939 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:53,940 INFO v.v.h.TopicManager [nioEventLoopGroup-3-6] data: 
+2020-10-15 00:12:54,423 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-6] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:54,424 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:54,425 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Write to client:200 OK
+2020-10-15 00:12:54,427 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Close channel of 
+2020-10-15 00:12:54,428 INFO v.v.s.MyChannel [nioEventLoopGroup-3-6] Close is done!
+2020-10-15 00:12:54,429 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-6] Channel inactive!
+2020-10-15 00:12:54,438 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:54,440 INFO v.v.h.TopicManager [nioEventLoopGroup-3-7] data: 
+2020-10-15 00:12:54,927 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-7] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:54,928 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:54,928 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Write to client:200 OK
+2020-10-15 00:12:54,930 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Close channel of 
+2020-10-15 00:12:54,931 INFO v.v.s.MyChannel [nioEventLoopGroup-3-7] Close is done!
+2020-10-15 00:12:54,932 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-7] Channel inactive!
+2020-10-15 00:12:54,940 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:54,941 INFO v.v.h.TopicManager [nioEventLoopGroup-3-8] data: 
+2020-10-15 00:12:55,425 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-8] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:55,426 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:55,427 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Write to client:200 OK
+2020-10-15 00:12:55,428 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Close channel of 
+2020-10-15 00:12:55,429 INFO v.v.s.MyChannel [nioEventLoopGroup-3-8] Close is done!
+2020-10-15 00:12:55,430 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-8] Channel inactive!
+2020-10-15 00:12:55,440 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:55,443 INFO v.v.h.TopicManager [nioEventLoopGroup-3-9] data: 
+2020-10-15 00:12:55,930 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-9] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:55,931 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:55,932 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Write to client:200 OK
+2020-10-15 00:12:55,934 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Close channel of 
+2020-10-15 00:12:55,935 INFO v.v.s.MyChannel [nioEventLoopGroup-3-9] Close is done!
+2020-10-15 00:12:55,936 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-9] Channel inactive!
+2020-10-15 00:12:55,946 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:55,947 INFO v.v.h.TopicManager [nioEventLoopGroup-3-10] data: 
+2020-10-15 00:12:56,433 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-10] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:56,434 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:56,435 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Write to client:200 OK
+2020-10-15 00:12:56,437 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Close channel of 
+2020-10-15 00:12:56,437 INFO v.v.s.MyChannel [nioEventLoopGroup-3-10] Close is done!
+2020-10-15 00:12:56,438 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-10] Channel inactive!
+2020-10-15 00:12:56,448 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:56,449 INFO v.v.h.TopicManager [nioEventLoopGroup-3-11] data: 
+2020-10-15 00:12:57,631 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-11] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:57,632 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:57,633 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Write to client:200 OK
+2020-10-15 00:12:57,635 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Close channel of 
+2020-10-15 00:12:57,635 INFO v.v.s.MyChannel [nioEventLoopGroup-3-11] Close is done!
+2020-10-15 00:12:57,636 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-11] Channel inactive!
+2020-10-15 00:12:57,654 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:57,655 INFO v.v.h.TopicManager [nioEventLoopGroup-3-12] data: 
+2020-10-15 00:12:58,139 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-12] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:58,140 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:58,141 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Write to client:200 OK
+2020-10-15 00:12:58,143 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Close channel of 
+2020-10-15 00:12:58,143 INFO v.v.s.MyChannel [nioEventLoopGroup-3-12] Close is done!
+2020-10-15 00:12:58,144 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-12] Channel inactive!
+2020-10-15 00:12:58,155 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:58,158 INFO v.v.h.TopicManager [nioEventLoopGroup-3-13] data: 
+2020-10-15 00:12:58,640 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-13] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:58,641 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:58,641 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Write to client:200 OK
+2020-10-15 00:12:58,643 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Close channel of 
+2020-10-15 00:12:58,643 INFO v.v.s.MyChannel [nioEventLoopGroup-3-13] Close is done!
+2020-10-15 00:12:58,644 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-13] Channel inactive!
+2020-10-15 00:12:58,653 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:58,655 INFO v.v.h.TopicManager [nioEventLoopGroup-3-14] data: 
+2020-10-15 00:12:59,141 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-14] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:59,142 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:59,143 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Write to client:200 OK
+2020-10-15 00:12:59,144 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Close channel of 
+2020-10-15 00:12:59,145 INFO v.v.s.MyChannel [nioEventLoopGroup-3-14] Close is done!
+2020-10-15 00:12:59,146 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-14] Channel inactive!
+2020-10-15 00:12:59,156 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:59,158 INFO v.v.h.TopicManager [nioEventLoopGroup-3-15] data: 
+2020-10-15 00:12:59,639 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-15] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:59,640 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:12:59,641 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Write to client:200 OK
+2020-10-15 00:12:59,643 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Close channel of 
+2020-10-15 00:12:59,643 INFO v.v.s.MyChannel [nioEventLoopGroup-3-15] Close is done!
+2020-10-15 00:12:59,644 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-15] Channel inactive!
+2020-10-15 00:12:59,652 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:12:59,654 INFO v.v.h.TopicManager [nioEventLoopGroup-3-16] data: 
+2020-10-15 00:13:00,143 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-16] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:13:00,144 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:13:00,145 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Write to client:200 OK
+2020-10-15 00:13:00,146 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Close channel of 
+2020-10-15 00:13:00,147 INFO v.v.s.MyChannel [nioEventLoopGroup-3-16] Close is done!
+2020-10-15 00:13:00,148 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-16] Channel inactive!
+2020-10-15 00:13:00,155 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Request info: value=, host=127.0.0.1, topic=/getproductupdate?codeMarket=2
+2020-10-15 00:13:00,155 INFO v.v.h.TopicManager [nioEventLoopGroup-3-1] data: 
+2020-10-15 00:13:00,639 INFO v.v.b.BaseBusiness [nioEventLoopGroup-3-1] Response:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:13:00,640 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write:{"produce":[{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"5","pricesale":"4","code":"1"},{"price":"3","name":"1","pricesale":"4","code":"1"}],"code":"1","description":"Success"}
+2020-10-15 00:13:00,667 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Write to client:200 OK
+2020-10-15 00:13:00,668 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Close channel of 
+2020-10-15 00:13:00,669 INFO v.v.s.MyChannel [nioEventLoopGroup-3-1] Close is done!
+2020-10-15 00:13:00,670 INFO v.v.s.HttpServerHandler [nioEventLoopGroup-3-1] Channel inactive!
